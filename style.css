@@ -1,0 +1,389 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* General Styling --------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.9rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, 
+h2,
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+
+h1, 
+h3, 
+.icons a,
+.links a {
+    color: #F2A11C;
+}
+
+nav a,
+.links i, 
+address,
+address a,
+.bottomMenu a, 
+form label {
+    color: white;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+/* Styling by section ---------------------------------------------------  */
+
+/* Header section-----------------------------------------------------  */
+header {
+    background-image: url(./Bikerland/biker-land-assets/background.jpg);
+    min-height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 13rem;
+    width: 45%;
+    height: 150px;
+    margin: 0 auto;
+    padding-top: calc((100vh - 250px) / 2);
+    padding-bottom: calc((100vh - 250px) / 2);
+    /* 250px = 150px(h1) + 100px(nav) */
+}
+
+nav {
+    text-align: center;
+    padding-top: 30px;
+    height: 100px;
+}
+
+nav a {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.icons {
+    margin-left: auto;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+}
+
+.icons li {
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%
+}
+
+.fab {
+    font-size: 2.5rem;
+}
+
+/* Main ---------------------------------------------------  */
+
+/* Styling for the About us and Our mission sections: */
+.grid {
+    width: 50%;
+    height: 40vw; 
+    float: left;
+}
+
+.aboutUsImg {
+    background-image: url(./Bikerland/biker-land-assets/aboutUs.jpg);
+}
+
+.ourMissionImg {
+    background-image: url(./Bikerland/biker-land-assets/ourMission.jpg);
+}
+
+.aboutUsImg,
+.ourMissionImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 8.5vw 0;
+}
+
+.aboutUsPadding {
+    padding-right: 5vw;
+}
+
+.ourMissionPadding {
+    padding-left: 5vw;
+}
+
+.content h2,
+.content p {
+    margin-bottom: 45px;
+}
+
+.readMore {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.9rem;
+    color: #F2A11C;
+    background-color: #1F2022;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+/* Styling for the Meet Alyssa section: */
+.featured {
+    height: 40vw;
+    background-color: #F4F4F4;
+}
+
+.featuredImg {
+    width: 30%;
+    padding: 7vw 0;
+}
+
+.featuredTextContainer {
+    width: 70%;
+}
+
+.featuredImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.featuredTextContainer,
+.featuredImg {
+    float: left;
+}
+
+.featuredText {
+    padding: 8.5vw 0 8.5vw 2vw;
+}
+
+.featuredText h2,
+.featuredText p {
+    margin-bottom: 45px;
+}
+
+/* Styling for the links section: */
+.links {
+    background-image: url(./Bikerland/biker-land-assets/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 30vw;
+}
+
+.links ul {
+    width: 100%;
+    margin: 0 auto;
+    padding: 11.5vw 0;
+    text-align: center;
+}
+
+.links li {
+    display: inline-block;
+    text-align: center;
+    margin: 30px;
+}
+
+.links i {
+    display: block;
+    font-size: 3.5rem;
+}
+
+/* Styling for the instagram section: */
+.gram {
+    text-align: center;
+    padding: 4vw 0;
+}
+
+.gram h2 {
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.gram ul {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.gram li {
+    float: left;
+    width: calc((100% - 40px) / 3);
+    height: calc((100% - 40px) / 3);
+    margin: 0 10px;
+}
+
+.gram li:last-of-type {
+    margin-right: 0;
+}
+
+.gram li:first-of-type {
+    margin-left: 0;
+}
+
+.gram img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Footer ---------------------------------------------------  */
+footer {
+    background-color: #1F2022;
+    height: 30vw;
+}
+
+.footerContent{
+    padding: 5vw 0;
+    height: 92%;
+}
+
+.bottomMenu {
+    text-align: center;
+    height: 80px;
+}
+
+.bottomMenu a{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+footer section {
+    width: 50%;
+    margin: 3vw 0;
+    float: left;
+}
+
+address {
+    font-style: normal;
+}
+
+label[for=email] {
+    line-height: 6rem;
+}
+
+.addressSection h3 {
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    padding : 20px;
+    float: left;
+}
+
+input[type=email] {
+    width: 75%;
+} 
+
+input[type=submit] {
+    width: 25%;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #F2A11C;
+}
+
+.copyright {
+    background-color: black;
+    clear: both;
+    height: 8%;
+    padding: 0.5vw;
+}
+
+.copyright, 
+.copyright a {
+    color: #4A4A4A;
+    text-align: center;
+}
+
+
+/* Media Queries---------------------------------------------------  */
+
+/* 1440px - Laptop */
+@media (max-width: 1440px) {
+
+}
+
+
+
+@media (max-width: 1160px) {
+
+
+}
+
+/* Portrait tablet and small desktops * VERSION MOBILE*/
+@media (max-width: 940px) {
+
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px){
+
+
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+
+}
