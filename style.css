@@ -81,7 +81,7 @@ h3 {
 
 /* Header section-----------------------------------------------------  */
 header {
-    background-image: url(./biker-land-assets/background.jpg);
+    background-image: url(./bikerLandAssets/background.jpg);
     min-height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -96,20 +96,29 @@ h1 {
     height: 150px;
     margin: 0 auto;
     padding-top: calc((100vh - 250px) / 2);
-    padding-bottom: calc((100vh - 250px) / 2);
     /* 250px = 150px(h1) + 100px(nav) */
 }
 
 nav {
     text-align: center;
-    padding-top: 30px;
     height: 100px;
 }
 
-nav a {
+input[type=checkbox],
+i.fa-bars,
+.menuLabel {
+    display: none;
+}
+
+.mainMenu li {
     text-align: center;
     padding: 20px;
     margin: 20px;
+    display: inline-block;
+}
+
+li.mainMenuIcons {
+    display: none;
 }
 
 .icons {
@@ -150,11 +159,11 @@ nav a {
 }
 
 .aboutUsImg {
-    background-image: url(./biker-land-assets/aboutUs.jpg);
+    background-image: url(./bikerLandAssets/aboutUs.jpg);
 }
 
 .ourMissionImg {
-    background-image: url(./biker-land-assets/ourMission.jpg);
+    background-image: url(./bikerLandAssets/ourMission.jpg);
 }
 
 .aboutUsImg,
@@ -247,7 +256,7 @@ nav a {
 
 /* Styling for the links section: */
 .links {
-    background-image: url(./biker-land-assets/background2.jpg);
+    background-image: url(./bikerLandAssets/background2.jpg);
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -313,12 +322,10 @@ nav a {
 /* Footer ---------------------------------------------------  */
 footer {
     background-color: #1F2022;
-    height: 55vh;
 }
 
 .footerContent{
     padding: 5vw 0;
-    height: 92%;
 }
 
 .bottomMenu {
@@ -358,11 +365,11 @@ input {
 }
 
 input[type=email] {
-    width: 75%;
+    width: 70%;
 } 
 
 input[type=submit] {
-    width: 25%;
+    width: 30%;
     text-transform: uppercase;
     font-weight: 700;
     background-color: #F2A11C;
@@ -371,9 +378,9 @@ input[type=submit] {
 
 .copyright {
     background-color: black;
-    clear: both;
-    height: 8%;
     padding: 0.5vw;
+    font-size: 1.6rem;
+    margin: 0;
 }
 
 .copyright, 
@@ -387,25 +394,112 @@ input[type=submit] {
 
 /*Laptop */
 @media (max-width: 1280px) {
-    /* input[type=submit] {
-    padding: 20px 15px;
-} */
-}
+    input[type=submit] {
+        padding: 20px 15px;
+    }
 
+    input {
+        font-size: 1.8rem;
+    }
+}
 
 /* Portrait tablet and small desktops * VERSION MOBILE*/
 @media (max-width: 940px) {
+    input[type=email] {
+        width: 60%;
+    }
 
+    input[type=submit] {
+        width: 40%;
+    }
 }
 
-
+@media (max-width: 824px){
+    form,
+    address {
+        font-size: 1.8rem;
+    }
+}
 /* Landscape phone to portrait tablet---------------------------- */
 @media (max-width: 768px){
     header {
-        background-image: url(./biker-land-assets/backgroundMobile.jpg);
+        background-image: url(./bikerLandAssets/backgroundMobile.jpg);
+    }
+
+    h1 {
+        font-size: 10rem;
+        padding-top: 30vh;
     }
 /* 
     DO NAV STUFF */
+    /* .mainMenu */
+
+input[type=checkbox],
+i.fa-bars {
+    display: inline-block;
+}
+
+.mainMenu {
+    background-color: #F4F4F4;
+    height: 100vh;
+    width: 33vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    left: -33vh;
+    transition: all 1s ease;
+    z-index: 10;
+}
+
+.mainMenuIcons {
+    display: block;
+}
+
+.mainMenu li {
+    border-bottom: 2px solid black;
+    display: block;
+}
+
+.mainMenu a{
+    color: black;
+}
+
+input[type="checkbox"]:checked + .mainMenu {
+    left: 0;
+}
+
+label[for="toggle"] {
+    color: #F4F4F4;
+    font-size: 2.5rem;
+    position: fixed;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .icons {
         display: none;
@@ -483,10 +577,6 @@ input[type=submit] {
     }
 
     /* the footer section */
-    footer {
-        height: 65vh;
-    }
-
     footer section {
     width: 100%;
     float: none;
@@ -522,11 +612,6 @@ input[type=submit] {
 @media (max-width: 414px) {
     nav {
         display: none;
-    }
-
-    h1 {
-        font-size: 8rem;
-        margin-top: 70px;
     }
 
     /* About us and our mission section */

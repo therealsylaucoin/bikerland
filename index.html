@@ -21,10 +21,29 @@
         <div class="wrapper">
 
             <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <label for="toggle">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle" />
+
+                <ul class="mainMenu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="mainMenuIcons"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="mainMenuIcons"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="mainMenuIcons"><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
+                    <li class="mainMenuIcons"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
             </nav>
 
             <h1>Bikerland</h1>
@@ -100,11 +119,11 @@
 
         <!-- FEATURED / MEET ALYSSA SECTION -->
 
-        <section class="featured ">
+        <section class="featured">
 
             <div class="clearfix wrapper">
                 <div class="featuredImg">
-                    <img src="./biker-land-assets/meetAlyssa.jpg"
+                    <img src="./bikerLandAssets/meetAlyssa.jpg"
                         alt="Side view of a woman on a road bike in a city, going fast">
                 </div>
 
@@ -175,11 +194,11 @@
                 <h2>The Gram</h2>
 
                 <ul class="clearfix gramList">
-                    <li><img src="./biker-land-assets/gram1.jpg" alt="Front view of a woman on a road bike in a city.">
+                    <li><img src="./bikerLandAssets/gram1.jpg" alt="Front view of a woman on a road bike in a city.">
                     </li>
-                    <li><img src="./biker-land-assets/gram2.jpg"
+                    <li><img src="./bikerLandAssets/gram2.jpg"
                             alt="A racing cyclist on his bike passing a few spectators."></li>
-                    <li><img src="./biker-land-assets/gram3.jpg" alt="A white coaster bike resting against a building.">
+                    <li><img src="./bikerLandAssets/gram3.jpg" alt="A white coaster bike resting against a building.">
                     </li>
                 </ul>
 
@@ -222,7 +241,7 @@
 
                 <form class="clearfix">
                     <label for="email">Subscribe to our newsletter to stay updated.</label><br>
-                    <input type="email" id="email" name="email" value="email address">
+                    <input type="email" id="email" name="email" placeholder="email address">
                     <input type="submit" value="Subscribe">
                 </form>
 
