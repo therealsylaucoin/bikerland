@@ -9,7 +9,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* General Styling --------------------------------------------------- */
-
 * {
     padding: 0;
     margin: 0;
@@ -24,6 +23,7 @@ body {
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.9rem;
+    color: #1F2022;
 }
 
 ul {
@@ -78,7 +78,6 @@ h3 {
 }
 
 /* Styling by section ---------------------------------------------------  */
-
 /* Header section-----------------------------------------------------  */
 header {
     background-image: url(./bikerLandAssets/background.jpg);
@@ -141,7 +140,6 @@ li.mainMenuIcons {
 }
 
 /* Main ---------------------------------------------------  */
-
 /* Styling for the About us and Our mission sections: */
 .grid {
     width: 50%;
@@ -389,9 +387,7 @@ input[type=submit] {
     text-align: center;
 }
 
-
 /* Media Queries---------------------------------------------------  */
-
 /*Laptop */
 @media (max-width: 1280px) {
     input[type=submit] {
@@ -414,12 +410,14 @@ input[type=submit] {
     }
 }
 
+/* Addiitonal break point for better responsiveness */
 @media (max-width: 824px){
     form,
     address {
         font-size: 1.8rem;
     }
 }
+
 /* Landscape phone to portrait tablet---------------------------- */
 @media (max-width: 768px){
     header {
@@ -430,76 +428,55 @@ input[type=submit] {
         font-size: 10rem;
         padding-top: 30vh;
     }
-/* 
-    DO NAV STUFF */
-    /* .mainMenu */
 
-input[type=checkbox],
-i.fa-bars {
-    display: inline-block;
-}
+    input[type=checkbox],
+    i.fa-bars {
+        display: inline-block;
+    }
 
-.mainMenu {
-    background-color: #F4F4F4;
-    height: 100vh;
-    width: 33vw;
-    position: fixed;
-    left: 0;
-    top: 0;
-    left: -33vh;
-    transition: all 1s ease;
-    z-index: 10;
-}
+    .mainMenu {
+        background-color: #F4F4F4;
+        height: 100vh;
+        width: 33vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        left: -33vh;
+        transition: all 0.5s ease;
+        z-index: 10;
+    }
 
-.mainMenuIcons {
-    display: block;
-}
+    .mainMenuIcons {
+        display: block;
+    }
 
-.mainMenu li {
-    border-bottom: 2px solid black;
-    display: block;
-}
+    .mainMenu li {
+        border-bottom: 2px solid #1F2022;
+        display: block;
+    }
 
-.mainMenu a{
-    color: black;
-}
+    .mainMenu a{
+        color: black;
+    }
 
-input[type="checkbox"]:checked + .mainMenu {
-    left: 0;
-}
+    input[type="checkbox"]:checked + .mainMenu {
+        left: 0;
+    }
 
-label[for="toggle"] {
-    color: #F4F4F4;
-    font-size: 2.5rem;
-    position: fixed;
-    cursor: pointer;
-    top: 15px;
-    right: 15px;
-    z-index: 10;
-}
+    label[for="toggle"] {
+        color: #F4F4F4;
+        text-shadow: -1px 2px 2px rgba(31,32,34,0.6);
+        font-size: 3rem;
+        position: fixed;
+        cursor: pointer;
+        top: 15px;
+        right: 15px;
+        z-index: 10;
+    }
 
-input[type="checkbox"] {
-    visibility: hidden;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    input[type="checkbox"] {
+        visibility: hidden;
+    }
 
     .icons {
         display: none;
@@ -523,7 +500,7 @@ input[type="checkbox"] {
 
     /* Featured section */
     .featured {
-        height: auto;
+        height: 100%;
         text-align: center;
     }
 
@@ -548,6 +525,11 @@ input[type="checkbox"] {
     }
 
     /* Links section */    
+    .links {
+        height: 100%;
+        padding: 50px;
+    }
+
     .links li {
         display: block;
         margin: 50px;
@@ -587,6 +569,10 @@ input[type="checkbox"] {
     height: 40px;
     }
 
+    .bottomMenu a {
+        text-transform: none;
+    }
+
     .addressSection {
         margin: 40px 0;
     }
@@ -607,11 +593,15 @@ input[type="checkbox"] {
     }
 }
 
-
 /* Landscape phones and down-----------------------*/
 @media (max-width: 414px) {
-    nav {
-        display: none;
+    h1 {
+        font-size: 7rem;
+    }
+
+    .mainMenu {
+        width: 50vw;
+        left: -50vh;
     }
 
     /* About us and our mission section */
@@ -637,7 +627,6 @@ input[type="checkbox"] {
 
     /* Footer section */
     .bottomMenu a {
-        text-transform: none;
         padding: 10px;
         margin: 5px;
     }
@@ -657,10 +646,6 @@ input[type="checkbox"] {
 
 /* Portrait phones and down-----------------------*/
 @media (max-width: 375px) {
-    h1 {
-        font-size: 7rem;
-    }
-
     .links div {
         top: 0;
     }
@@ -674,6 +659,13 @@ input[type="checkbox"] {
     }
 
     footer {
-        height: 90vh;
+        height: 100%;
+    }
+}
+
+/* Small phone */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 6rem;
     }
 }
