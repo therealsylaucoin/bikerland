@@ -6,7 +6,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 *, *:before, *:after {box-sizing: inherit}
 
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* General Styling --------------------------------------------------- */
 
@@ -81,7 +81,7 @@ h3 {
 
 /* Header section-----------------------------------------------------  */
 header {
-    background-image: url(./Bikerland/biker-land-assets/background.jpg);
+    background-image: url(./biker-land-assets/background.jpg);
     min-height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -92,7 +92,7 @@ header {
 h1 {
     text-align: center;
     font-size: 13rem;
-    width: 45%;
+    width: 100%;
     height: 150px;
     margin: 0 auto;
     padding-top: calc((100vh - 250px) / 2);
@@ -136,16 +136,25 @@ nav a {
 /* Styling for the About us and Our mission sections: */
 .grid {
     width: 50%;
-    height: 40vw; 
+    height: 75vh; 
+}
+
+.aboutUsImg,
+.aboutUsContent {
+    float: right;
+}
+
+.ourMissionImg,
+.ourMissionContent {
     float: left;
 }
 
 .aboutUsImg {
-    background-image: url(./Bikerland/biker-land-assets/aboutUs.jpg);
+    background-image: url(./biker-land-assets/aboutUs.jpg);
 }
 
 .ourMissionImg {
-    background-image: url(./Bikerland/biker-land-assets/ourMission.jpg);
+    background-image: url(./biker-land-assets/ourMission.jpg);
 }
 
 .aboutUsImg,
@@ -156,16 +165,31 @@ nav a {
 }
 
 .content {
-    margin: 0 auto;
-    padding: 8.5vw 0;
+    padding: 8% 0;
 }
 
-.aboutUsPadding {
-    padding-right: 5vw;
+.content h2 {
+    position: relative;
+    top: 20%;
 }
 
-.ourMissionPadding {
-    padding-left: 5vw;
+.content p {
+    position: relative;
+    margin: 50px 0;
+    top: 15%;
+}
+
+.content a {
+    position: relative;
+    top: 10%;
+}
+
+.aboutUsContent * {
+    padding-right: 4vw;
+}
+
+.ourMissionContent {
+    padding-left: 4vw;
 }
 
 .content h2,
@@ -182,17 +206,18 @@ nav a {
     background-color: #1F2022;
     text-transform: uppercase;
     padding: 10px 20px;
+    display: inline-block;
 }
 
 /* Styling for the Meet Alyssa section: */
 .featured {
-    height: 40vw;
+    height: 65vh;
     background-color: #F4F4F4;
 }
 
 .featuredImg {
     width: 30%;
-    padding: 7vw 0;
+    padding: 10vh 0;
 }
 
 .featuredTextContainer {
@@ -210,7 +235,9 @@ nav a {
 }
 
 .featuredText {
-    padding: 8.5vw 0 8.5vw 2vw;
+    position: relative;
+    top: 10vh;
+    padding-left: 50px;
 }
 
 .featuredText h2,
@@ -220,17 +247,18 @@ nav a {
 
 /* Styling for the links section: */
 .links {
-    background-image: url(./Bikerland/biker-land-assets/background2.jpg);
+    background-image: url(./biker-land-assets/background2.jpg);
     background-size: cover;
     background-position: center;
-    height: 30vw;
+    height: 60vh;
 }
 
-.links ul {
-    width: 100%;
+.links div {
+    width: 90%;
     margin: 0 auto;
-    padding: 11.5vw 0;
     text-align: center;
+    position: relative;
+    top: 40%;
 }
 
 .links li {
@@ -246,8 +274,9 @@ nav a {
 
 /* Styling for the instagram section: */
 .gram {
+    height: 90vh;
     text-align: center;
-    padding: 4vw 0;
+    padding: 12vh 0;
 }
 
 .gram h2 {
@@ -284,7 +313,7 @@ nav a {
 /* Footer ---------------------------------------------------  */
 footer {
     background-color: #1F2022;
-    height: 30vw;
+    height: 55vh;
 }
 
 .footerContent{
@@ -337,6 +366,7 @@ input[type=submit] {
     text-transform: uppercase;
     font-weight: 700;
     background-color: #F2A11C;
+    text-align: center;
 }
 
 .copyright {
@@ -355,35 +385,210 @@ input[type=submit] {
 
 /* Media Queries---------------------------------------------------  */
 
-/* 1440px - Laptop */
-@media (max-width: 1440px) {
-
+/*Laptop */
+@media (max-width: 1280px) {
+    /* input[type=submit] {
+    padding: 20px 15px;
+} */
 }
 
-
-
-@media (max-width: 1160px) {
-
-
-}
 
 /* Portrait tablet and small desktops * VERSION MOBILE*/
 @media (max-width: 940px) {
 
-
-
 }
 
-/* Landscape phone to portrait tablet */
+
+/* Landscape phone to portrait tablet---------------------------- */
 @media (max-width: 768px){
+    header {
+        background-image: url(./biker-land-assets/backgroundMobile.jpg);
+    }
+/* 
+    DO NAV STUFF */
 
+    .icons {
+        display: none;
+    }
 
+    /* About us and our mission sections */
+    .grid {
+        width: 100%;
+        text-align: center;
+    }
 
+    .aboutUsImg,
+    .ourMissionImg {
+        height: 40vh;
+    }
+
+    .aboutUsContent,
+    .ourMissionContent {
+        height: 100%;
+    }
+
+    /* Featured section */
+    .featured {
+        height: auto;
+        text-align: center;
+    }
+
+    .featuredTextContainer {
+        width: 100%;
+        padding: 50px 0;
+    }
+
+    .featuredText {
+        padding: 0;
+        top: 0;
+    }
+
+    .featuredImg {
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+
+    .featuredImg img{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Links section */    
+    .links li {
+        display: block;
+        margin: 50px;
+    }
+
+    .links div {
+        top: 20%;
+    }
+
+    /* The gram section */
+    .gram {
+        padding: 50px 0;
+        height: auto;
+    }
+
+    .gramList li:last-of-type {
+        display: none;
+    }
+
+    .gramList li:nth-of-type(2) {
+        margin-right: 0;
+    }
+
+    .gramList li {
+        width: calc(50% - 5px);
+        margin: 5px;
+    }
+
+    /* the footer section */
+    footer {
+        height: 65vh;
+    }
+
+    footer section {
+    width: 100%;
+    float: none;
+    text-align: center;
+    }
+
+    .bottomMenu {
+    height: 40px;
+    }
+
+    .addressSection {
+        margin: 40px 0;
+    }
+
+    input {
+        float: none;
+    }
+
+    input[type=email],
+    input[type=submit]  {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    } 
+
+    .copyright {
+        margin-top: 40px;
+    }
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
 
+/* Landscape phones and down-----------------------*/
+@media (max-width: 414px) {
+    nav {
+        display: none;
+    }
 
+    h1 {
+        font-size: 8rem;
+        margin-top: 70px;
+    }
 
+    /* About us and our mission section */
+    .content h2,
+    .content p,
+    .content a {
+        margin: 20px 0;
+    }
+
+    .content a {
+        margin-top: 0;
+    }
+
+    /* Meet alyssa */
+    .featuredImg img {
+        width: 100%;
+    }
+
+    /* Links section */
+    .links div {
+        top: 5%;
+    }
+
+    /* Footer section */
+    .bottomMenu a {
+        text-transform: none;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .bottomMenu a:first-of-type {
+        padding-left: 0;
+    }
+
+    .bottomMenu a:last-of-type {
+        padding-right: 0;
+    }
+
+    footer {
+        height: 80vh;
+    }
+}
+
+/* Portrait phones and down-----------------------*/
+@media (max-width: 375px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+    .links div {
+        top: 0;
+    }
+
+    .bottomMenu a {
+        margin: 0;
+    }
+
+    label {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        height: 90vh;
+    }
 }
