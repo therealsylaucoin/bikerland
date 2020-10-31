@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sylvie Aucoin - Project 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Pacifico&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/d8482cd430.js" crossorigin="anonymous"></script>
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <a href="#mainContent" class="skipLink">Skip to main content.</a>
 
     <!-- HEADER SECTION STARTS HERE -->
 
@@ -81,7 +82,7 @@
 
     <!-- MAIN SECTION STARTS HERE -->
 
-    <main>
+    <main id="mainContent">
         <!-- ABOUT US SECTION -->
 
         <section class="clearfix">
@@ -89,7 +90,7 @@
             <div class="grid aboutUsImg">
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper clearfix">
 
                 <div class="content grid aboutUsContent">
 
@@ -116,7 +117,7 @@
             <div class="grid ourMissionImg">
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper clearfix">
 
                 <div class="content grid ourMissionContent">
 
@@ -142,12 +143,13 @@
         <section class="featured">
 
             <div class="clearfix wrapper">
+
                 <div class="featuredImg">
                     <img src="./bikerLandAssets/meetAlyssa.jpg"
                         alt="Side view of a woman on a road bike in a city, going fast">
                 </div>
 
-                <div class="featuredTextContainer">
+                <!-- <div class="featuredTextContainer"> -->
 
                     <div class="featuredText">
 
@@ -172,7 +174,7 @@
 
                         <a href="#" class="readMore">Read more</a>
 
-                    </div>
+                    <!-- </div> -->
 
                 </div>
             </div>
@@ -260,7 +262,8 @@
                 <h3>Stay updated</h3>
 
                 <form class="clearfix">
-                    <label for="email">Subscribe to our newsletter to stay updated.</label><br>
+                    <label for="email">Subscribe to our newsletter to stay updated.</label>
+                    <label class="srOnly" for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="email address">
                     <input type="submit" value="Subscribe">
                 </form>
