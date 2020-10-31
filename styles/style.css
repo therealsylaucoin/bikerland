@@ -402,6 +402,19 @@ input[type=submit] {
     input[type=submit] {
         width: 40%;
     }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+
+
+    .featuredText p,
+    .featuredText h2,
+    .content p,
+    .content h2 {
+        margin-bottom: 20px;
+    }
 }
 
 /* Addiitonal break point for better responsiveness */
